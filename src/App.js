@@ -1,11 +1,11 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
-import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Shop from "./components/Shop";
-import Workout from "./components/Workout";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
+import Shop from "./components/Shop/Shop";
+import Workout from "./components/Workouts/Workout";
 
 function App() {
   return (
