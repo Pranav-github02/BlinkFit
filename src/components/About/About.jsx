@@ -1,9 +1,10 @@
 import React from "react";
+import Calculators from "./Calculators";
 
 const About = () => {
   return (
     <div>
-      <h1>Hello About</h1>
+      <Calculators />
     </div>
   );
 };

@@ -46,13 +46,13 @@ const Navbar = () => {
                 <i class="fa-solid fa-magnifying-glass"></i>
               </li>
               <li>
-                <i class="fa-sharp fa-solid fa-user"></i>
+                <i class="far fa-user"></i>
               </li>
               <li>
-                <i class="fa-regular fa-heart"></i>
+                <i class="far fa-heart"></i>
               </li>
               <li>
-                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fal fa-shopping-cart"></i>
               </li>
             </ul>
           </div>
