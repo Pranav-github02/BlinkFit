@@ -7,13 +7,16 @@ import productreturn from "./media/Images/product-return.png";
 import running from "./media/Images/running.jpg";
 import dumbell from "./media/Images/dumbell.jpg";
 import yoga from "./media/Images/yoga.jpg";
+import Card from "./Card";
+import fila from "./media/Images/fila.png";
+import north_face from "./media/Images/north_face.png";
+import skechers from "./media/Images/skechers.png";
+import UA from "./media/Images/UA.png";
 import "./About.css";
 
 const About = () => {
   return (
     <div>
-      {/* <BMI />
-      <CalorieCounter /> */}
       <div className="bg_img_div"></div>
       <div className="about_content">
         <br />
@@ -124,6 +127,80 @@ const About = () => {
       <div className="reviews">
         <h1>Reviews</h1>
         <hr style={{ margin: "auto", width: "70px" }} />
+        <div
+          id="carouselExampleControls"
+          className="carousel carousel-dark slide"
+          data-bs-touch="false"
+        >
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <div className="card-holder">
+                <Card />
+                <Card />
+              </div>
+            </div>
+            <div className="carousel-item">
+              <div className="card-holder">
+                <Card />
+                <Card />
+              </div>
+            </div>
+            <div className="carousel-item">
+              <div className="card-holder">
+                <Card />
+                <Card />
+              </div>
+            </div>
+          </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+            style={{ width: "5%" }}
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+            style={{ width: "5%" }}
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <br />
+      <br />
+
+      {/* Top Brands */}
+      <div className="top_brands">
+        <h1>TOP BRANDS</h1>
+        <hr style={{ margin: "auto", width: "70px" }} />
+        <div className="brand_logos">
+          <div id="brand1">
+            <img src={fila} alt="fila logo" />
+          </div>
+          <div id="brand2">
+            <img src={north_face} alt="The North Face Logo" />
+          </div>
+          <div id="brand3">
+            <img src={skechers} alt="skechers logo" />
+          </div>
+          <div id="brand4">
+            <img src={UA} alt="Under Armour Logo" />
+          </div>
+        </div>
       </div>
     </div>
   );
