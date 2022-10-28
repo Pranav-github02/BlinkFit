@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-const Calculators = () => {
+const BMI = () => {
   const [bmi, setBmi] = useState(0);
   const [height, setHeight] = useState();
   const [weight, setWeight] = useState();
-  let [bmi_res, setBmiRes] = useState("");
+  let [bmi_res, setBmiRes] = useState();
   const calculateBMI = (e) => {
     e.preventDefault();
     let user_weight = weight;
@@ -67,4 +67,4 @@ const Calculators = () => {
   );
 };
 
-export default Calculators;
+export default BMI;

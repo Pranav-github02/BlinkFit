@@ -6,6 +6,7 @@ const Home = () => {
     <div>
       {/* <h1>Hello Home</h1> */}
       <Hero />
+      {/* <h1>After hero</h1> */}
     </div>
   );
 };

@@ -1,0 +1,79 @@
+.bg_img_div{
+    background-image: url('./media/Images/exercise.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.about_content{
+    background-color: white;
+    color: black;
+    height: auto;
+}
+
+.div-1{
+    background-image: url("https://wpbingosite.com/wordpress/beloni/wp-content/uploads/2022/04/img2-7.jpg");
+    height: 350px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-1 p{
+    color: gray;
+}
+.div-2{
+    background-image: url("https://wpbingosite.com/wordpress/beloni/wp-content/uploads/2022/04/img2-8.jpg");
+    height: 350px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-2 p{
+    color: gray;
+}
+.div-3{
+    background-image: url("https://wpbingosite.com/wordpress/beloni/wp-content/uploads/2022/04/img2-6.jpg");
+    height: 350px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.div-3 p{
+    color: gray;
+}
+
+.specifications{
+    position: relative;
+}
+
+
+.spec_absolute1{
+    position: absolute;
+    top: 37em;
+    right: 0;
+}
+
+.spec_absolute2{
+    position: absolute;
+    top: 5em;
+    right: 0;
+}
+
+.spec_absolute3{
+    position: absolute;
+    top: 23em;
+}
+
+.reviews{
+    background-color: grey;
+    margin-top: 70em;
+}
+
