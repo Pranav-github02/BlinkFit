@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BMI from "./Calculators/BMI";
 import CalorieCounter from "./Calculators/Calorie_Counter";
 import flexible from "./media/Images/flexible.png";
@@ -15,6 +15,7 @@ import UA from "./media/Images/UA.png";
 import "./About.css";
 
 const About = () => {
+  const [active, setActive] = useState(true);
   return (
     <div>
       <div className="bg_img_div"></div>
@@ -122,6 +123,15 @@ const About = () => {
           />
         </div>
       </div>
+
+      <button className="btn btn-success" onClick={() => setActive(true)}>
+        BMI
+      </button>
+      <button className="btn btn-warning" onClick={() => setActive(false)}>
+        Calorie Counter
+      </button>
+
+      {active ? <BMI /> : <CalorieCounter />}
 
       {/* Reviews */}
       <div className="reviews">
