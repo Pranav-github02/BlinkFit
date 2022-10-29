@@ -124,15 +124,17 @@ const About = () => {
         </div>
       </div>
 
-      <button className="btn btn-success" onClick={() => setActive(true)}>
-        BMI
-      </button>
-      <button className="btn btn-warning" onClick={() => setActive(false)}>
-        Calorie Counter
-      </button>
+      <div className="calc">
+        <button className="btn btn-success" onClick={() => setActive(true)}>
+          BMI
+        </button>
+        <button className="btn btn-warning" onClick={() => setActive(false)}>
+          Calorie Counter
+        </button>
 
-      {active ? <BMI /> : <CalorieCounter />}
-
+        {active ? <BMI /> : <CalorieCounter />}
+      </div>
+      
       {/* Reviews */}
       <div className="reviews">
         <h1>Reviews</h1>

@@ -72,9 +72,13 @@
     top: 23em;
 }
 
+.calc {
+    margin-top:65em;
+}
+
 .reviews{
     background-color: #f6f6f6;
-    margin-top: 70em;
+    margin-top: 5em;
 }
 
 .card{
