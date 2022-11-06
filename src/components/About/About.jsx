@@ -1,25 +1,27 @@
 import React, { useState } from "react";
 import BMI from "./Calculators/BMI";
 import CalorieCounter from "./Calculators/Calorie_Counter";
-import flexible from "./media/Images/flexible.png";
-import freeshipping from "./media/Images/free-shipping.png";
-import productreturn from "./media/Images/product-return.png";
 import running from "./media/Images/running.jpg";
 import dumbell from "./media/Images/dumbell.jpg";
 import yoga from "./media/Images/yoga.jpg";
-import Card from "./Card";
+import Testimonials from "./Testimonials";
+import WhyUs from "./WhyUs";
 import fila from "./media/Images/fila.png";
 import north_face from "./media/Images/north_face.png";
 import skechers from "./media/Images/skechers.png";
 import UA from "./media/Images/UA.png";
 import "./About.css";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+AOS.init();
 
 const About = () => {
   const [active, setActive] = useState(true);
   return (
     <div>
       <div className="bg_img_div"></div>
-      <div className="about_content">
+      <WhyUs />
+      {/* <div className="about_content">
         <br />
         <br />
         <br />
@@ -98,24 +100,48 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="specifications">
-        <div className="spec_absolute1">
+      <div className="specifications reveal">
+        <div
+          className="spec_absolute1"
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="400"
+          data-aos-easing="ease-in-out"
+          data-aos-anchor-placement="top-center"
+        >
           <img
             src={running}
             alt="running"
             style={{ height: "350px", width: "350px" }}
           />
         </div>
-        <div className="spec_absolute2">
+        <div
+          className="spec_absolute2"
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="400"
+          data-aos-easing="ease-in-out"
+          data-aos-anchor-placement="top-center"
+        >
           <img
             src={dumbell}
             alt="dumbell"
             style={{ height: "350px", width: "350px" }}
           />
         </div>
-        <div className="spec_absolute3">
+        <div
+          className="spec_absolute3"
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="400"
+          data-aos-easing="ease-in-out"
+          data-aos-anchor-placement="top-center"
+        >
           <img
             src={yoga}
             alt="yoga"
@@ -134,64 +160,9 @@ const About = () => {
 
         {active ? <BMI /> : <CalorieCounter />}
       </div>
-      
+
       {/* Reviews */}
-      <div className="reviews">
-        <h1>Reviews</h1>
-        <hr style={{ margin: "auto", width: "70px" }} />
-        <div
-          id="carouselExampleControls"
-          className="carousel carousel-dark slide"
-          data-bs-touch="false"
-        >
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <div className="card-holder">
-                <Card />
-                <Card />
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="card-holder">
-                <Card />
-                <Card />
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="card-holder">
-                <Card />
-                <Card />
-              </div>
-            </div>
-          </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev"
-            style={{ width: "5%" }}
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleControls"
-            data-bs-slide="next"
-            style={{ width: "5%" }}
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
+      <Testimonials />
       <br />
       <br />
 
