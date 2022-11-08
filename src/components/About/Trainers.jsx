@@ -1,68 +1,39 @@
-import React from "react";
-// import trainers from "./media/Images/trainers.jfif";
+import React, { useState, useEffect } from "react";
+import TrainersCard from "./TrainersCard";
 
 const Trainers = () => {
-  let trainerId = [];
-  let trainerDetail = [];
-  const getData = async () => {
-    const limit = 35;
-    var myHeaders = new Headers();
-    myHeaders.append("apikey", "94q8geC7iTMoTIy51iVTKQzX1EnP548G");
-
-    var requestOptions = {
-      method: "GET",
-      redirect: "follow",
-      headers: myHeaders,
-    };
-    const data = await fetch(
-      `https://api.apilayer.com/hyperhuman/trainers/trending?limit=${limit}`,
-      requestOptions
-    );
-    const jsonData = await data.json();
-    console.log(jsonData);
-
-    jsonData.data.forEach((obj) => {
-      trainerId.push(obj.id);
-    });
-    console.log(trainerId);
-  };
-
-  const getDetails = async () => {
-    var myHeaders = new Headers();
-    myHeaders.append("apikey", "94q8geC7iTMoTIy51iVTKQzX1EnP548G");
-
-    var requestOptions = {
-      method: "GET",
-      redirect: "follow",
-      headers: myHeaders,
-    };
-
-    trainerId.map(async (id) => {
-      const trainerdetails = await fetch(
-        `https://api.apilayer.com/hyperhuman/trainers/${id}`,
-        requestOptions
-      );
-      const jsonTrainerDetails = await trainerdetails.json();
-      if (
-        jsonTrainerDetails.data.description !== null &&
-        jsonTrainerDetails.data.email !== null &&
-        jsonTrainerDetails.data.name !== null &&
-        jsonTrainerDetails.data.profileImage.url !== null &&
-        jsonTrainerDetails.data.specialisations !== null
-      ) {
-        trainerDetail.push(jsonTrainerDetails);
-      }
-    });
-    console.log(trainerDetail);
-  };
+  const [data, setData] = useState([]);
+  // API call
+  let cnt = 1;
+  useEffect(() => {
+    if (cnt <= 1) {
+      const callApi = async () => {
+        const url = await fetch(
+          "http://trainersapi-env.eba-zycsknyu.ap-northeast-1.elasticbeanstalk.com/trainers"
+        );
+        const jsonData = await url.json();
+        console.log(jsonData);
+        setData((data) => [...data, jsonData]);
+      };
+      callApi();
+    }
+  }, []);
+  console.log(data);
   return (
     <div>
-      <button className="btn btn-success" onClick={getData}>
-        Fetch Data
-      </button>
-      <button className="btn btn-danger" onClick={getDetails}>
-        Fetch Details
-      </button>
+      {data.map((obj) => {
+        return (
+          <TrainersCard
+            name={obj.name}
+            image={obj.image}
+            desc={obj.desc}
+            age={obj.age}
+            email={obj.email}
+            specialisation={obj.specialisation}
+            experience={obj.experience}
+          />
+        );
+      })}
     </div>
   );
 };
