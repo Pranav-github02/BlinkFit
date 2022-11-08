@@ -18,7 +18,7 @@ class Trainers extends PureComponent {
       .catch(error => console.log(error))
   }
   render() {
-    let trainer = <p>WAITING......</p>
+    let trainer = <p>Loading.....</p>
     console.log(this.state.trainers)
     if (this.state.trainers != null) {
       trainer = (
