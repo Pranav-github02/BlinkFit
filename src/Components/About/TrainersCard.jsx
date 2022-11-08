@@ -13,7 +13,7 @@ const TrainersCard = ({
     <div>
       <div>
         <div>
-          <img src={image} alt="trainer profile img" />
+          <img src={image} style={{width:"300px",height:"100%"}} alt="trainer profile img" />
         </div>
         <div>
           <h3>{name}</h3>

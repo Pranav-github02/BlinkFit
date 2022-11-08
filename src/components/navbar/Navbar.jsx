@@ -25,6 +25,9 @@ const Navbar = () => {
               <NavLink to="contact">
                 <li>Contact</li>
               </NavLink>
+              <NavLink to="trainers">
+                <li>Trainers</li>
+              </NavLink>
             </ul>
             <button
               className="mobile-menu-icon"
