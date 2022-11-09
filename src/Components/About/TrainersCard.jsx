@@ -29,19 +29,19 @@ const TrainersCard = ({
           <h3>{name}</h3>
           <p>Fitness Instructor</p>
           <div className="socialmediaicons">
-            <a href="www.facebook.com">
+            <a href="https://www.facebook.com">
               <i class="fa-brands fa-2xl fa-facebook"></i>
             </a>
             &nbsp;&nbsp;
-            <a href="www.instagram.com">
+            <a href="https://www.instagram.com">
               <i class="fa-brands fa-2xl fa-instagram"></i>
             </a>
             &nbsp;&nbsp;
-            <a href="www.twitter.com">
+            <a href="https://www.twitter.com">
               <i class="fa-brands fa-2xl fa-twitter"></i>
             </a>
             &nbsp;&nbsp;
-            <a href="www.youtube.com">
+            <a href="https://www.youtube.com">
               <i class="fa-brands fa-2xl fa-youtube"></i>
             </a>
             &nbsp;&nbsp;
