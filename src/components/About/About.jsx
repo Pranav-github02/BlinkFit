@@ -65,10 +65,10 @@ const About = () => {
         <button className="btn btn-success" onClick={() => setActive(true)}>
           BMI
         </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
         <button className="btn btn-warning" onClick={() => setActive(false)}>
           Calorie Counter
         </button>
-
         {active ? <BMI /> : <CalorieCounter />}
       </div>
 
