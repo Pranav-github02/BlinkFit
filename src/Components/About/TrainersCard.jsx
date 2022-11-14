@@ -34,7 +34,7 @@ const TrainersCard = ({
             </a>
             &nbsp;&nbsp;
             <a href="https://www.instagram.com">
-              <i class="fa-brands fa-xl fa-instagram" style={{color:"#d63384"}}></i>
+              <i class="fa-brands fa-xl fa-instagram" style={{ color: "#d63384" }}></i>
             </a>
             &nbsp;&nbsp;
             <a href="https://www.twitter.com">
