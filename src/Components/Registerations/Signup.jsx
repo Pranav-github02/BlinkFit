@@ -161,15 +161,7 @@ const Signup = () => {
                           className="btn btn-link btn-floating mx-1"
                           style={{ backgroundColor: "#ed4824", color: "white" }}
                         >
-                          <i className="fab fa-twitter"></i>
-                        </button>
-
-                        <button
-                          type="button"
-                          className="btn btn-link btn-floating mx-1"
-                          style={{ backgroundColor: "#ed4824", color: "white" }}
-                        >
-                          <i className="fab fa-instagram"></i>
+                          <i className="fab fa-apple"></i>
                         </button>
                       </div>
                     </form>
