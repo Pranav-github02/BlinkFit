@@ -70,7 +70,10 @@ const Signup = () => {
                               value={firstname}
                               onChange={(e) => setFirstName(e.target.value)}
                             />
-                            <label className="form-label" htmlFor="form3Example1">
+                            <label
+                              className="form-label"
+                              htmlFor="form3Example1"
+                            >
                               First name
                             </label>
                           </div>
@@ -84,7 +87,10 @@ const Signup = () => {
                               value={lastname}
                               onChange={(e) => setLastName(e.target.value)}
                             />
-                            <label className="form-label" htmlFor="form3Example2">
+                            <label
+                              className="form-label"
+                              htmlFor="form3Example2"
+                            >
                               Last name
                             </label>
                           </div>
@@ -110,7 +116,7 @@ const Signup = () => {
                           id="form3Example4"
                           className="form-control"
                           value={password}
-                          onChange={(e) => setPassword(e.target.password)}
+                          onChange={(e) => setPassword(e.target.value)}
                         />
                         <label className="form-label" htmlFor="form3Example4">
                           Password
