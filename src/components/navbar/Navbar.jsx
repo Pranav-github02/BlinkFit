@@ -35,37 +35,37 @@ const Navbar = () => {
               onClick={() => setIsMobile(!isMobile)}
             >
               {isMobile ? (
-                <i class="fa-sharp fa-solid fa-circle-xmark fa-xs"></i>
+                <i className="fa-sharp fa-solid fa-circle-xmark fa-xs"></i>
               ) : (
-                <i class="fa-solid fa-bars fa-xs"></i>
+                <i className="fa-solid fa-bars fa-xs"></i>
               )}
             </button>
           </div>
           <div className="navlogo">
-            <i class="fa-solid fa-dumbbell"></i>
+            <i className="fa-solid fa-dumbbell"></i>
           </div>
           <div className="navitems">
             <ul>
               <li>
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i className="fa-solid fa-magnifying-glass"></i>
               </li>
               <li>
                 <i
-                  class="far fa-user btn btn-primary"
+                  className="far fa-user btn btn-primary"
                   type="button"
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModal"
                 >
                   <div
-                    class="modal fade"
+                    className="modal fade"
                     id="exampleModal"
-                    tabindex="-1"
+                    tabIndex="-1"
                     aria-labelledby="exampleModalLabel"
                     aria-hidden="true"
                   >
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-body">
+                    <div className="modal-dialog">
+                      <div className="modal-content">
+                        <div className="modal-body">
                           <img
                             src={avatar}
                             alt="profile avatar"
@@ -90,10 +90,10 @@ const Navbar = () => {
                 </i>
               </li>
               <li>
-                <i class="far fa-heart"></i>
+                <i className="far fa-heart"></i>
               </li>
               <li>
-                <i class="fal fa-shopping-cart"></i>
+                <i className="fal fa-shopping-cart"></i>
               </li>
             </ul>
           </div>
