@@ -1,6 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const navigate = useNavigate();
+  const [firstname, setFirstName] = useState("");
+  const [lastname, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const signup = async () => {
+    if (
+      firstname === "" ||
+      lastname === "" ||
+      email === "" ||
+      password === ""
+    ) {
+      alert("Please fill all feilds completely");
+    } else {
+      const res = await fetch("http://localhost:5000/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ firstname, lastname, email, password }),
+      });
+      const data = await res.json();
+      if (data.status === 500 || !data) {
+        window.alert("Registeration Failed");
+      } else if (data.status === 422) {
+        window.alert("This email already exists, Please Signin");
+      } else if (data.status === 201) {
+        window.alert("Registeration Successful");
+        navigate("/login");
+      }
+    }
+  };
   return (
     <div>
       <section class="">
@@ -34,6 +67,8 @@ const Signup = () => {
                               type="text"
                               id="form3Example1"
                               class="form-control"
+                              value={firstname}
+                              onChange={(e) => setFirstName(e.target.value)}
                             />
                             <label class="form-label" for="form3Example1">
                               First name
@@ -46,6 +81,8 @@ const Signup = () => {
                               type="text"
                               id="form3Example2"
                               class="form-control"
+                              value={lastname}
+                              onChange={(e) => setLastName(e.target.value)}
                             />
                             <label class="form-label" for="form3Example2">
                               Last name
@@ -59,6 +96,8 @@ const Signup = () => {
                           type="email"
                           id="form3Example3"
                           class="form-control"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
                         />
                         <label class="form-label" for="form3Example3">
                           Email address
@@ -70,6 +109,8 @@ const Signup = () => {
                           type="password"
                           id="form3Example4"
                           class="form-control"
+                          value={password}
+                          onChange={(e) => setPassword(e.target.password)}
                         />
                         <label class="form-label" for="form3Example4">
                           Password
@@ -79,6 +120,7 @@ const Signup = () => {
                       <button
                         type="submit"
                         class="btn btn-primary btn-block mb-4"
+                        onClick={signup}
                       >
                         Sign up
                       </button>
