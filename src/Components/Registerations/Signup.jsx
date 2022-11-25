@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+import bgsignup from "./media/bgsignup.jpg";
 
 const Signup = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -30,7 +31,7 @@ const Signup = () => {
         window.alert("This email already exists, Please Signin");
       } else if (data.status === 201) {
         window.alert("Registeration Successful");
-        navigate("/login");
+        // navigate("/login");
       }
     }
   };
@@ -39,14 +40,19 @@ const Signup = () => {
       <section className="">
         <div
           className="px-4 py-5 px-md-5 text-center text-lg-start"
-          style={{ backgroundColor: "hsl(0, 0%, 96%)" }}
+          style={{
+            backgroundColor: "hsl(0, 0%, 96%)",
+            backgroundImage: `url(${bgsignup})`,
+          }}
         >
           <div className="container">
             <div className="row gx-lg-5 align-items-center">
               <div className="col-lg-6 mb-5 mb-lg-0">
-                <h1 className="my-5 display-3 fw-bold ls-tight">
+                <h1 className="my-5 display-3 fw-bold ls-tight text-white">
                   The best offer <br />
-                  <span className="text-primary">for you from BlinkFit</span>
+                  <span style={{ color: "#ed4824" }}>
+                    for you from BlinkFit
+                  </span>
                 </h1>
                 <p style={{ color: "hsl(217, 10%, 50.8%)" }}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -125,8 +131,9 @@ const Signup = () => {
 
                       <button
                         type="submit"
-                        className="btn btn-primary btn-block mb-4"
+                        className="btn btn-block mb-4"
                         onClick={signup}
+                        style={{ backgroundColor: "#ed4824", color: "white" }}
                       >
                         Sign up
                       </button>
