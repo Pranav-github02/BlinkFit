@@ -7,7 +7,7 @@ const Hero = () => {
     return (
         <div className='Home_hero'>
             <div className='video'>
-                <video playsinline autoPlay id="heroVideo" loop muted poster="">
+                <video playsInline autoPlay id="heroVideo" loop muted poster="">
                     <source src={hero1} type="video/mp4" />
                     <source src={hero2} type="video/webm" />
                 </video>
