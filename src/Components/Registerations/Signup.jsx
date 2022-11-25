@@ -27,7 +27,7 @@ const Signup = () => {
       const data = await res.json();
       if (data.status === 500 || !data) {
         window.alert("Registeration Failed");
-      } else if (data.status === 422) {
+      } else if (data.status === 409) {
         window.alert("This email already exists, Please Signin");
       } else if (data.status === 201) {
         window.alert("Registeration Successful");
@@ -143,6 +143,7 @@ const Signup = () => {
                         <button
                           type="button"
                           className="btn btn-link btn-floating mx-1"
+                          style={{ backgroundColor: "#ed4824", color: "white" }}
                         >
                           <i className="fab fa-facebook-f"></i>
                         </button>
@@ -150,6 +151,7 @@ const Signup = () => {
                         <button
                           type="button"
                           className="btn btn-link btn-floating mx-1"
+                          style={{ backgroundColor: "#ed4824", color: "white" }}
                         >
                           <i className="fab fa-google"></i>
                         </button>
@@ -157,6 +159,7 @@ const Signup = () => {
                         <button
                           type="button"
                           className="btn btn-link btn-floating mx-1"
+                          style={{ backgroundColor: "#ed4824", color: "white" }}
                         >
                           <i className="fab fa-twitter"></i>
                         </button>
@@ -164,8 +167,9 @@ const Signup = () => {
                         <button
                           type="button"
                           className="btn btn-link btn-floating mx-1"
+                          style={{ backgroundColor: "#ed4824", color: "white" }}
                         >
-                          <i className="fab fa-github"></i>
+                          <i className="fab fa-instagram"></i>
                         </button>
                       </div>
                     </form>
