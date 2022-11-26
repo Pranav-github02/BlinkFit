@@ -4,6 +4,11 @@ const User = require("../Schema/schema");
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
+router.get("/signup/", (req, res) => {
+  User.find()
+    .then(result => res.status(200).json({ message: 'Entries from the DB', entries: result }))
+    .catch(err => res.status(500).json({ error: err }))
+})
 router.post("/signup", async (req, res) => {
   const { firstname, lastname, email, password } = req.body;
   try {

@@ -8,7 +8,8 @@ const Signup = () => {
   const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const signup = async () => {
+  const signup = async (e) => {
+    e.preventDefault();
     if (
       firstname === "" ||
       lastname === "" ||
@@ -25,11 +26,11 @@ const Signup = () => {
         body: JSON.stringify({ firstname, lastname, email, password }),
       });
       const data = await res.json();
-      if (data.status === 500 || !data) {
+      if (res.status === 500 || !res) {
         window.alert("Registeration Failed");
-      } else if (data.status === 409) {
+      } else if (res.status === 409) {
         window.alert("This email already exists, Please Signin");
-      } else if (data.status === 201) {
+      } else if (res.status === 201) {
         window.alert("Registeration Successful");
         // navigate("/login");
       }
@@ -132,7 +133,7 @@ const Signup = () => {
                       <button
                         type="submit"
                         className="btn btn-block mb-4"
-                        onClick={signup}
+                        onClick={(e)=>signup(e)}
                         style={{ backgroundColor: "#ed4824", color: "white" }}
                       >
                         Sign up
