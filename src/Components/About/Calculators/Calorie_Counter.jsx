@@ -109,20 +109,20 @@ const Calorie_Counter = () => {
 
   return (
     <div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 mx-auto">
-            <div class="card card-body text-center mt-5">
-              <h1 class="heading display-5 pb-3">Calorie Calculator</h1>
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-6 mx-auto">
+            <div className="card card-body text-center mt-5">
+              <h1 className="heading display-5 pb-3">Calorie Calculator</h1>
               <form id="calorie-form">
-                <div class="form-group row">
-                  <label for="age" class="col-sm-2 col-form-label">
+                <div className="form-group row">
+                  <label for="age" className="col-sm-2 col-form-label">
                     Age
                   </label>
-                  <div class="col-sm-10">
+                  <div className="col-sm-10">
                     <input
                       type="number"
-                      class="form-control"
+                      className="form-control"
                       value={age}
                       onChange={(e) => setAge(e.target.value)}
                       placeholder="Ages 15-80"
@@ -130,31 +130,31 @@ const Calorie_Counter = () => {
                   </div>
                 </div>
 
-                <fieldset class="form-group">
-                  <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
-                    <div class="col-sm-10" id="form-radio">
-                      <div class="custom-control custom-radio custom-control-inline">
+                <fieldset className="form-group">
+                  <div className="row">
+                    <legend className="col-form-label col-sm-2 pt-0">Gender</legend>
+                    <div className="col-sm-10" id="form-radio">
+                      <div className="custom-control custom-radio custom-control-inline">
                         <input
                           type="radio"
                           id="male"
                           name="customRadioInline1"
-                          class="custom-control-input"
+                          className="custom-control-input"
                           onChange={handleGender1}
                         />
-                        <label class="custom-control-label" for="male">
+                        <label className="custom-control-label" for="male">
                           Male
                         </label>
                       </div>
-                      <div class="custom-control custom-radio custom-control-inline">
+                      <div className="custom-control custom-radio custom-control-inline">
                         <input
                           type="radio"
                           id="female"
                           name="customRadioInline1"
-                          class="custom-control-input"
+                          className="custom-control-input"
                           onChange={handleGender2}
                         />
-                        <label class="custom-control-label" for="female">
+                        <label className="custom-control-label" for="female">
                           Female
                         </label>
                       </div>
@@ -162,14 +162,14 @@ const Calorie_Counter = () => {
                   </div>
                 </fieldset>
 
-                <div class="form-group row">
-                  <label for="weight" class="col-sm-2 col-form-label">
+                <div className="form-group row">
+                  <label for="weight" className="col-sm-2 col-form-label">
                     Weight
                   </label>
-                  <div class="col-sm-10">
+                  <div className="col-sm-10">
                     <input
                       type="number"
-                      class="form-control"
+                      className="form-control"
                       value={weight}
                       onChange={(e) => setWeight(e.target.value)}
                       placeholder="In kilograms"
@@ -177,14 +177,14 @@ const Calorie_Counter = () => {
                   </div>
                 </div>
 
-                <div class="form-group row">
-                  <label for="height" class="col-sm-2 col-form-label">
+                <div className="form-group row">
+                  <label for="height" className="col-sm-2 col-form-label">
                     Height
                   </label>
-                  <div class="col-sm-10">
+                  <div className="col-sm-10">
                     <input
                       type="number"
-                      class="form-control"
+                      className="form-control"
                       value={height}
                       onChange={(e) => setHeight(e.target.value)}
                       placeholder="In centimeters"
@@ -192,10 +192,10 @@ const Calorie_Counter = () => {
                   </div>
                 </div>
 
-                <div class="form-group row">
-                  <legend class="col-form-label col-sm-2 pt-0">Activity</legend>
+                <div className="form-group row">
+                  <legend className="col-form-label col-sm-2 pt-0">Activity</legend>
                   <select
-                    class="custom-select col-sm-10"
+                    className="custom-select col-sm-10"
                     id="list"
                     onChange={handleSelectTag}
                   >
@@ -218,11 +218,11 @@ const Calorie_Counter = () => {
                   </select>
                 </div>
 
-                <div class="form-group">
+                <div className="form-group">
                   <input
                     type="submit"
                     value="Calculate"
-                    class="btn btn-dark btn-block"
+                    className="btn btn-dark btn-block"
                     onClick={getResult}
                   />
                 </div>
@@ -232,13 +232,13 @@ const Calorie_Counter = () => {
                 <img src="./img/Loading.gif" alt="" />
               </div>
 
-              <div id="results" class="pt-4">
+              <div id="results" className="pt-4">
                 <h5>Total Calories</h5>
-                <div class="form-group">
-                  <div class="input-group">
+                <div className="form-group">
+                  <div className="input-group">
                     <input
                       type="number"
-                      class="form-control"
+                      className="form-control"
                       id="total-calories"
                       disabled
                       value={totalCalories}

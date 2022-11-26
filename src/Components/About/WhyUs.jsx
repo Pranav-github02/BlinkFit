@@ -31,9 +31,9 @@ const WhyUs = () => {
         </p>
       </div>
 
-      <div class="container">
-        <div class="row">
-          <div class="col">
+      <div className="container">
+        <div className="row">
+          <div className="col">
             <div className="div-1">
               <div>
                 <img
@@ -50,7 +50,7 @@ const WhyUs = () => {
               </div>
             </div>
           </div>
-          <div class="col">
+          <div className="col">
             <div className="div-2">
               <div>
                 <img
@@ -67,7 +67,7 @@ const WhyUs = () => {
               </div>
             </div>
           </div>
-          <div class="col">
+          <div className="col">
             <div className="div-3">
               <div>
                 <img

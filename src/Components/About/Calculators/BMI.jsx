@@ -25,13 +25,13 @@ const BMI = () => {
       <h1>BMI</h1>
       <br />
       <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="exampleInputEmail1" className="form-label">
             Enter Height
           </label>
           <input
             type="number"
-            class="form-control"
+            className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             placeholder="height(m)"
@@ -40,13 +40,13 @@ const BMI = () => {
             style={{ width: "40%", margin: "auto" }}
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="exampleInputPassword1" className="form-label">
             Weight
           </label>
           <input
             type="number"
-            class="form-control"
+            className="form-control"
             id="exampleInputPassword1"
             placeholder="weight(kg)"
             value={weight}
@@ -56,7 +56,7 @@ const BMI = () => {
         </div>
         <button
           type="submit"
-          class="btn btn-outline-primary"
+          className="btn btn-outline-primary"
           onClick={calculateBMI}
         >
           Submit
