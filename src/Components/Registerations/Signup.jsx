@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import bgsignup from "./media/bgsignup.jpg";
 
 const Signup = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -25,14 +25,14 @@ const Signup = () => {
         },
         body: JSON.stringify({ firstname, lastname, email, password }),
       });
-      const data = await res.json();
+      // const data = await res.json();
       if (res.status === 500 || !res) {
         window.alert("Registeration Failed");
       } else if (res.status === 409) {
         window.alert("This email already exists, Please Signin");
       } else if (res.status === 201) {
         window.alert("Registeration Successful");
-        // navigate("/login");
+        navigate("/login");
       }
     }
   };
@@ -133,7 +133,7 @@ const Signup = () => {
                       <button
                         type="submit"
                         className="btn btn-block mb-4"
-                        onClick={(e)=>signup(e)}
+                        onClick={(e) => signup(e)}
                         style={{ backgroundColor: "#ed4824", color: "white" }}
                       >
                         Sign up
