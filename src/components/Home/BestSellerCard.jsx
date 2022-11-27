@@ -1,6 +1,16 @@
 import React from 'react'
+import { useState } from 'react'
 import "./Best_Selling.css"
 const BestSellerCard = ({ id, title, image, desc, price }) => {
+  const [qty, setQty] = useState(1)
+  const Increment = (e) => {
+    e.preventDefault();
+    if (qty < 8) setQty(qty => qty + 1)
+  }
+  const Decrement = (e) => {
+    e.preventDefault();
+    if (qty > 0) setQty(qty => qty - 1)
+  }
   return (
     <>
       <div className='bestseller'>
@@ -9,13 +19,14 @@ const BestSellerCard = ({ id, title, image, desc, price }) => {
             <img src={image.image1} style={{ width: "350px", height: "450px" }} alt="" />
             <div className='wishlist' data-title='Wishlist'>
               <button>
-                Add to Wishlist
+                {/* Add to Wishlist */}
+                <i class="fa-solid fa-heart"></i>
               </button>
             </div>
             <div className='product-button'>
               <div className='add_cart'></div>
               <div className='quick-view'>
-                <a type="button" data-bs-toggle="modal" data-bs-target="#Modal"><i className="fa-solid fa-magnifying-glass"></i></a>
+                <a type="button" href='#Modal' data-bs-toggle="modal" data-bs-target="#Modal"><i className="fa-solid fa-magnifying-glass"></i></a>
               </div>
             </div>
           </div>
@@ -73,6 +84,16 @@ const BestSellerCard = ({ id, title, image, desc, price }) => {
                     <div className='desc'>
                       <p>{desc}</p>
                     </div>
+                    <form>
+                      <div className='qty-btn'>
+                        <button type='button' className='minus' onClick={(e) => Decrement(e)}></button>
+                        <input type="number" name="qty" id="qty" value={qty} readOnly />
+                        <button type='button' className='plus' onClick={(e) => Increment(e)}></button>
+                        <button type='submit' className='add-cart btn btn-dark'>Add to Cart</button>
+                        <button type='button' className='wishlist'><i class="fa-regular fa-heart"></i></button>
+                      </div>
+                      <button type='submit' className='buy_now btn btn-primary'>Buy Now</button>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -83,5 +104,6 @@ const BestSellerCard = ({ id, title, image, desc, price }) => {
     </>
   )
 }
+// }
 
 export default BestSellerCard

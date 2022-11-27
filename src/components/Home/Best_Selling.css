@@ -23,7 +23,7 @@
     right: 10px;
 }
 
-.bestseller .product .wishlist::before {
+/* .bestseller .product .wishlist::before {
     content: "Wishlist";
     position: absolute;
     padding: 0 10px;
@@ -42,16 +42,16 @@
     border-radius: 3px;
     -webkit-border-radius: 3px;
     pointer-events: none;
-}
+} */
 
 .bestseller .product .wishlist button {
-    font-size: 0;
+    /* font-size: 0; */
     background: #fff;
     text-align: center;
     position: relative;
     white-space: nowrap;
     margin-top: 0;
-    color: #fff;
+    color: lightgray;
     width: 39px;
     height: 39px;
     line-height: 39px;
@@ -67,15 +67,20 @@
     transition: all .5s ease;
 }
 
-.bestseller .product .wishlist button::before {
+.bestseller .product .wishlist button:focus,
+.bestseller .product .wishlist button:active {
+    color: red;
+}
+
+/* .bestseller .product .wishlist button::before {
     content: "\2661";
     font-size: 14px;
     color: #c4c4c4;
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
-}
+} */
 
-.bestseller .product .wishlist::after {
+/* .bestseller .product .wishlist::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -89,12 +94,12 @@
     pointer-events: none;
     opacity: 0;
     visibility: hidden;
-}
+} */
 
 .bestseller .product .product-button {
     position: absolute;
     top: auto;
-    bottom: 85px;
+    bottom: 115px;
     right: 15px;
     left: auto;
     z-index: 9;
@@ -102,7 +107,7 @@
     padding: 0;
 }
 
-.bestseller .product .product-button .add_cart {}
+/* .bestseller .product .product-button .add_cart {} */
 
 .bestseller .product .product-button .quick-view {
     text-align: center;
@@ -289,4 +294,116 @@
 .modal .modal-dialog .modal-content .product-detail .row .product-info .content .desc p {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.modal .modal-dialog .modal-content .product-detail .row .product-info .content form {
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.modal .modal-dialog .modal-content .product-detail .row .product-info .content form .qty-btn {
+    display: flex;
+    flex: 1;
+    margin: 5px 10px 5px 0;
+
+    width: auto;
+}
+
+.modal .modal-dialog .modal-content .product-detail .row .product-info .content form .qty-btn .minus,
+.modal .modal-dialog .modal-content .product-detail .row .product-info .content form .qty-btn .plus {
+    background: transparent;
+    line-height: 24px;
+    border: none;
+    width: 38px;
+    height: 46px;
+    outline-color: transparent;
+    color: hsla(0, 0%, 53%, .8);
+    font-size: 0;
+    float: left;
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-weight: 900;
+    text-align: center;
+    /* overflow: visible; */
+    /* text-decoration: none; */
+    cursor: pointer;
+}
+
+.modal .modal-dialog .modal-content .product-detail .row .product-info .content form .qty-btn .minus {
+    border: 1px lightgray;
+    border-style: solid hidden solid solid;
+}
+
+.modal .modal-dialog .modal-content .product-detail .row .product-info .content form .qty-btn .plus {
+    border: 1px lightgray;
+    border-style: solid solid solid hidden;
+}
+
+.modal .modal-dialog .modal-content .product-detail .row .product-info .content form .qty-btn .minus::before {
+    content: "\2212";
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.modal .modal-dialog .modal-content .product-detail .row .product-info .content form .qty-btn .plus::before {
+    content: "\002B";
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.modal .modal-dialog .modal-content .product-detail .row .product-info .content form .qty-btn input {
+    width: 75px;
+    border: 0;
+    height: 46px;
+    text-align: right;
+    padding: 0 17px;
+    font-size: 18px;
+    float: right;
+    background: transparent;
+    box-shadow: none;
+    border: 1px lightgray;
+    border-style: solid hidden solid hidden;
+}
+
+.modal .modal-dialog .modal-content .product-detail .row .product-info .content form .qty-btn .add-cart {
+    margin-left: 10px;
+    /* flex:1; */
+    text-transform: uppercase;
+    font-size: 14px;
+    width: 170px;
+}
+
+.modal .modal-dialog .modal-content .product-detail .row .product-info .content form .qty-btn .wishlist {
+    background: transparent;
+    /* color:#fff; */
+    border: none;
+    flex: 1;
+    /* font-size: 22px; */
+}
+
+.modal .modal-dialog .modal-content .product-detail .row .product-info .content form .qty-btn .wishlist i {
+    background: transparent;
+    font-size: 22px;
+    /* color:#fff; */
+    /* border: 1px solid lightgray; */
+    flex: 1;
+}
+
+.modal .modal-dialog .modal-content .product-detail .row .product-info .content form .buy_now {
+    font-size: 14px;
+    line-height: 50px;
+    text-transform: uppercase;
+    flex: 1;
+    padding: 0 15px;
+    margin: 5px 0;
 }
