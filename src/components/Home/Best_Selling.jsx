@@ -25,6 +25,7 @@ class BestSelling extends PureComponent {
                     {
                         this.state.bestSelling.map((obj) =>
                             <BestSellerCard
+                                key={obj.id}
                                 id={obj.id}
                                 title={obj.title}
                                 image={obj.image}
@@ -37,17 +38,17 @@ class BestSelling extends PureComponent {
             )
         }
         return (
-                <div className="best_selling">
+            <div className="best_selling">
                 <h2 className="title">BESTSELLER</h2>
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'space-around'
-                    }}>
-                        {bestseller}
-                    </div>
+                <div style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-around'
+                }}>
+                    {bestseller}
                 </div>
-            
+            </div>
+
         )
     }
 }
