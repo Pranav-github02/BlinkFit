@@ -2,13 +2,37 @@ const express = require("express");
 const router = express.Router();
 const User = require("../Schema/schema");
 const mongoose = require("mongoose");
+const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
+
+router.post("/", async (req, res) => {
+  const token = req.body.token;
+  // console.log(`req.body token ${token}`);
+  if (token) {
+    const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
+    const rootUser = await User.findOne({
+      _id: verifyToken,
+      "tokens.token": token,
+    });
+    if (!rootUser) {
+      return res.status(409).json({ message: "Not Authorized User" });
+    } else {
+      return res
+        .status(200)
+        .json({ message: "User Authorized", user: rootUser, authorized: true });
+    }
+  } else {
+    return res.status(404).json({ message: "Ask The user to login first" });
+  }
+});
 
 router.get("/signup/", (req, res) => {
   User.find()
-    .then(result => res.status(200).json({ message: 'Entries from the DB', entries: result }))
-    .catch(err => res.status(500).json({ error: err }))
-})
+    .then((result) =>
+      res.status(200).json({ message: "Entries from the DB", entries: result })
+    )
+    .catch((err) => res.status(500).json({ error: err }));
+});
 router.post("/signup", async (req, res) => {
   const { firstname, lastname, email, password } = req.body;
   try {
@@ -48,7 +72,11 @@ router.post("/login", async (req, res) => {
     if (userExist) {
       const matchPassword = await bcrypt.compare(password, userExist.password);
       if (matchPassword) {
-        return res.status(200).json({ message: "Login Successful" });
+        const jwttoken = await userExist.generateAuthToken();
+        // console.log(`/login - ${jwttoken}`);
+        return res
+          .status(200)
+          .json({ message: "Login Successful", token: jwttoken });
       } else {
         return res.status(403).json({ message: "Login Failed" });
       }
@@ -59,5 +87,22 @@ router.post("/login", async (req, res) => {
     console.log(error);
   }
 });
+
+// router.get("/secret", async (req, res) => {
+//   const token = req.body.token;
+//   console.log(`req.body token ${token}`);
+//   const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
+//   const rootUser = await User.findOne({
+//     _id: verifyToken,
+//     "tokens.token": token,
+//   });
+//   if (!rootUser) {
+//     return res.status(409).json({ message: "Not Authorized User" });
+//   } else {
+//     return res
+//       .status(200)
+//       .json({ message: "User Authorized", user: rootUser, authorized: true });
+//   }
+// });
 
 module.exports = router;

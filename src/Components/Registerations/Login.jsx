@@ -19,7 +19,10 @@ const Login = () => {
         },
         body: JSON.stringify({ email, password }),
       });
-      // const data = await res.json();
+      const data = await res.json();
+      // console.log(data.token);
+      const jwttoken = data.token;
+      localStorage.setItem("JSONWebToken", jwttoken);
       if (res.status === 200) {
         window.alert("Login Successful");
         navigate("/");

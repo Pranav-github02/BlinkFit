@@ -1,10 +1,44 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import avatar from "../About/media/Images/avatar.jpg";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [userName, setUserName] = useState("");
+
+  // const isUserLoggedIn = async () => {
+  //   const token = localStorage.getItem("JSONWebToken");
+  //   console.log(token);
+  //   const res = await fetch("http://localhost:5000/", {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({}),
+  //   });
+  // };
+  useEffect(() => {
+    const isUserLoggedIn = async () => {
+      const token = localStorage.getItem("JSONWebToken");
+      console.log(`token from localstorage ${token}`);
+      const res = await fetch("http://localhost:5000/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ token: token }),
+      });
+      const data = await res.json();
+      console.log(data);
+      if (data.authorized === true) {
+        let name = data.user.firstname;
+        setUserName(name);
+      }
+    };
+    isUserLoggedIn();
+  },[]);
+
   return (
     <div>
       <nav>
@@ -50,44 +84,48 @@ const Navbar = () => {
                 <i className="fa-solid fa-magnifying-glass"></i>
               </li>
               <li>
-                <i
-                  className="far fa-user btn btn-primary"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
-                >
-                  <div
-                    className="modal fade"
-                    id="exampleModal"
-                    tabIndex="-1"
-                    aria-labelledby="exampleModalLabel"
-                    aria-hidden="true"
+                {userName !== "" ? (
+                  userName
+                ) : (
+                  <i
+                    className="far fa-user btn btn-primary"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
                   >
-                    <div className="modal-dialog">
-                      <div className="modal-content">
-                        <div className="modal-body">
-                          <img
-                            src={avatar}
-                            alt="profile avatar"
-                            style={{ height: "10em", width: "10em" }}
-                          />
-                          <p>Name</p>
-                          <NavLink to="/login" style={{ color: "white" }}>
-                            <button type="button" className="btn btn-primary">
-                              Login
-                            </button>
-                          </NavLink>
-                          &nbsp;&nbsp;&nbsp;
-                          <NavLink to="/signup" style={{ color: "white" }}>
-                            <button type="button" className="btn btn-success">
-                              Sign Up
-                            </button>
-                          </NavLink>
+                    <div
+                      className="modal fade"
+                      id="exampleModal"
+                      tabIndex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div className="modal-dialog">
+                        <div className="modal-content">
+                          <div className="modal-body">
+                            <img
+                              src={avatar}
+                              alt="profile avatar"
+                              style={{ height: "10em", width: "10em" }}
+                            />
+                            <p>Name</p>
+                            <NavLink to="/login" style={{ color: "white" }}>
+                              <button type="button" className="btn btn-primary">
+                                Login
+                              </button>
+                            </NavLink>
+                            &nbsp;&nbsp;&nbsp;
+                            <NavLink to="/signup" style={{ color: "white" }}>
+                              <button type="button" className="btn btn-success">
+                                Sign Up
+                              </button>
+                            </NavLink>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </i>
+                  </i>
+                )}
               </li>
               <li>
                 <i className="far fa-heart"></i>
