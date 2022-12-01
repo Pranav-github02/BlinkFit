@@ -10,7 +10,7 @@ class BestSelling extends PureComponent {
         }
     }
     componentDidMount() {
-        let url = `http://fitnessshop-env.eba-2av5pnan.ap-northeast-1.elasticbeanstalk.com/clothing`
+        let url = `https://trainersapi-env.eba-svy2gn3i.ap-northeast-1.elasticbeanstalk.com/shop/clothing`
         axios.get(url)
             .then(response => {
                 this.setState({ bestSelling: response.data.clothing })

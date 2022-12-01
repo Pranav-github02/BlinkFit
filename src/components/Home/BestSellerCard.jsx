@@ -20,7 +20,7 @@ const BestSellerCard = ({ id, title, image, desc, price }) => {
             <div className='wishlist' data-title='Wishlist'>
               <button>
                 {/* Add to Wishlist */}
-                <i class="fa-solid fa-heart"></i>
+                <i className="fa-solid fa-heart"></i>
               </button>
             </div>
             <div className='product-button'>
@@ -90,7 +90,7 @@ const BestSellerCard = ({ id, title, image, desc, price }) => {
                         <input type="number" name="qty" id="qty" value={qty} readOnly />
                         <button type='button' className='plus' onClick={(e) => Increment(e)}></button>
                         <button type='submit' className='add-cart btn btn-dark'>Add to Cart</button>
-                        <button type='button' className='wishlist'><i class="fa-regular fa-heart"></i></button>
+                        <button type='button' className='wishlist'><i className="fa-regular fa-heart"></i></button>
                       </div>
                       <button type='submit' className='buy_now btn btn-primary'>Buy Now</button>
                     </form>

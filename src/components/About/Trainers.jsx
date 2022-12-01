@@ -10,7 +10,7 @@ class Trainers extends PureComponent {
     }
   }
   componentDidMount() {
-    let url = `http://trainersapi-env.eba-zycsknyu.ap-northeast-1.elasticbeanstalk.com/trainers`
+    let url = `https://trainersapi-env.eba-svy2gn3i.ap-northeast-1.elasticbeanstalk.com/trainers`
     axios.get(url)
       .then(response => {
         this.setState({ trainers: response.data.data })
@@ -19,7 +19,6 @@ class Trainers extends PureComponent {
   }
   render() {
     let trainer = <p>Loading.....</p>
-    console.log(this.state.trainers)
     if (this.state.trainers != null) {
       trainer = (
         <>
