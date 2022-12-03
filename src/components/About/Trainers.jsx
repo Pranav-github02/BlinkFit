@@ -10,7 +10,7 @@ class Trainers extends PureComponent {
     }
   }
   componentDidMount() {
-    let url = `https://trainersapi-env.eba-svy2gn3i.ap-northeast-1.elasticbeanstalk.com/trainers`
+    let url = `https://pranav-github02.github.io/blinkfit-api/trainers/trainers.json`
     axios.get(url)
       .then(response => {
         this.setState({ trainers: response.data.data })
