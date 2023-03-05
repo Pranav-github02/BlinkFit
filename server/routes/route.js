@@ -7,6 +7,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const sgMail = require("@sendgrid/mail");
 const speakeasy = require("speakeasy");
+const { findByIdAndUpdate } = require("../Schema/schema");
 
 //user signup
 router.post("/signup", async (req, res) => {
@@ -117,7 +118,8 @@ router.post("/login", async (req, res) => {
 //   }
 // });
 
-const sendEmail = (email, OTP) => {
+const sendEmail = (email) => {
+  const OTP = Math.floor(100000 + Math.random() * 900000);
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
     to: email,
@@ -127,15 +129,43 @@ const sendEmail = (email, OTP) => {
     html: `<strong>${OTP}</strong>`,
   };
   sgMail.send(msg);
+  return OTP;
 };
 
-router.patch("/forgetpassword", (req, res) => {
+let otp;
+router.get("/getotp", (req, res) => {
   const { email } = req.body;
-  const OTP = Math.floor(100000 + Math.random() * 900000);
-  sendEmail(email, OTP);
+  otp = sendEmail(email);
+  return res.status(200).json({ message: "OTP sent", otp });
 });
 
-
+router.post("/resetpassword", async (req, res) => {
+  const { userotp, email, newpassword } = req.body;
+  if (userotp === otp) {
+    const finduser = await User.findOne({ email: email });
+    if (finduser) {
+      const hashed_password = await bcrypt.hash(newpassword, 10);
+      const updated_password = {
+        password: hashed_password,
+      };
+      const updated = await User.findByIdAndUpdate(
+        finduser._id,
+        updated_password
+      );
+      if (updated) {
+        return res.status(200).json({ message: "Password reset successfully" });
+      } else {
+        return res
+          .status(500)
+          .json({ message: "Password not updated, try again" });
+      }
+    } else {
+      return res.status(404).json({ message: "Wrong credentials, try again" });
+    }
+  } else {
+    return res.status(404).json({ message: "OTP not matched, try again" });
+  }
+});
 
 // user details updation
 router.patch("/updateuserdetails", authenticate, async (req, res) => {
