@@ -11,7 +11,7 @@ const authenticate = async (req, res, next) => {
       req.id = verify_user.user_id;
       next();
     } else {
-      return res.status().json({ message: "Token expired, login again" });
+      return res.status(403).json({ message: "Token expired, login again" });
     }
   } catch (error) {
     return res.status(500).json({ message: "Server error" });
