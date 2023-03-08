@@ -1,0 +1,92 @@
+{
+    "accessories": [
+        {
+            "aid": "a001",
+            "title": "Skipping Rope",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "299",
+            "image": {
+                "image1": "https://contents.mediadecathlon.com/p1808190/8702d6294b79597d99b08355c2b7d69c/p1808190.jpg",
+                "image2": "https://contents.mediadecathlon.com/p1734914/eb0a678c40b70bfbbe4c861902ae5731/p1734914.jpg"
+            },
+            "quantity": "8"
+        },
+        {
+            "aid": "a002",
+            "title": "Fold-down Fitness Shoe Bag",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "499",
+            "image": {
+                "image1": "https://contents.mediadecathlon.com/p2292232/81971fda77882527ec7ea848149456f1/p2292232.jpg",
+                "image2": "https://contents.mediadecathlon.com/p2292233/89fbcdb1d7daa68052293987afe31ceb/p2292233.jpg"
+            },
+            "quantity": "8"
+        },
+        {
+            "aid": "a003",
+            "title": "Yoga Mat",
+            "desc": "Blinkfit Yoga Mats are premium and slip resistant. The cushioning is thick and comfortable available in vibrant colours. Our mats are made with PU Material which is an excellent material for making mats. It is non-toxic, tasteless, and non-slip, not easy to rot, there is an environment-friendly material.",
+            "price": "2,299",
+            "image": {
+                "image1": "https://contents.mediadecathlon.com/p1793755/b26246e36bccb36ea97945563eb9e400/p1793755.jpg",
+                "image2": "https://contents.mediadecathlon.com/p1942855/3af918a1cfaa72bffaba0f471386092e/p1942855.jpg"
+            },
+            "quantity": "8"
+        },
+        {
+            "aid": "a004",
+            "title": "Swiss ball",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "1,499",
+            "image": {
+                "image1": "https://contents.mediadecathlon.com/p1988448/6a36a8bd02be8ae2fd0268b9f5afb0c3/p1988448.jpg",
+                "image2": "https://contents.mediadecathlon.com/p1886589/424850c87b84da36dc8dd691bd2648f7/p1886589.jpg"
+            },
+            "quantity": "8"
+        },
+        {
+            "aid": "a005",
+            "title": "Weight Training Glove",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "999",
+            "image": {
+                "image1": "https://contents.mediadecathlon.com/p1258590/f29397f0f40edea344039fd9b591cef0/p1258590.jpg",
+                "image2": "https://contents.mediadecathlon.com/p1256676/3d54f363cb6671aa6a1fa84456229f28/p1256676.jpg"
+            },
+            "quantity": "8"
+        },
+        {
+            "aid": "a006",
+            "title": "Shaker 700 ml",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "799",
+            "image": {
+                "image1": "https://contents.mediadecathlon.com/p1256599/4a63a08b68e8c1f9edaf21e6f5176a2d/p1256599.jpg",
+                "image2": "https://contents.mediadecathlon.com/p1256537/2a0898b8d58dda558023ee2504893b45/p1256537.jpg"
+            },
+            "quantity": "8"
+        },
+        {
+            "aid": "a007",
+            "title": "Foam Roller",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "1,299",
+            "image": {
+                "image1": "https://contents.mediadecathlon.com/p2114439/d2cb2ddfa721f5053fa7c79f762a556d/p2114439.jpg",
+                "image2": "https://contents.mediadecathlon.com/p2114440/8c1cf5c9109ee99b84f454719a226852/p2114440.jpg"
+            },
+            "quantity": "8"
+        },
+        {
+            "aid": "a008",
+            "title": "Cardio Training Fitness Bag",
+            "desc": "15L bag. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "699",
+            "image": {
+                "image1": "https://contents.mediadecathlon.com/p2290887/f7bece11c7f592b96f7db0f053f3b7bd/p2290887.jpg",
+                "image2": "https://contents.mediadecathlon.com/p2272832/70fb4a8b76697266a056919cf85efdd4/p2272832.jpg"
+            },
+            "quantity": "8"
+        }
+    ]
+}

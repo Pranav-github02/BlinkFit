@@ -1,0 +1,100 @@
+{
+    "clothing": [
+        {
+            "id": "c001",
+            "title": "Men’s Wander Sleeveless",
+            "desc": "Put simply, warm-weather exploration is better in lightweight, moisture-wicking clothes. The 94% recycled Men’s Wander Sleeveless features moisture-wicking FlashDry™ and 6% elastane for extra stretch.",
+            "price": "400",
+            "image": {
+                "image1": "https://images.thenorthface.com/is/image/TheNorthFace/NF0A7QNN_JK3_hero?wid=1300&hei=1510&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0",
+                "image2": "https://images.thenorthface.com/is/image/TheNorthFace/NF0A7QNN_JK3_back?wid=1300&hei=1510&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0"
+            },
+            "qty": "8",
+            "size": "XL"
+        },
+        {
+            "id": "c002",
+            "title": "Women’s Midline Bra",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "380",
+            "image": {
+                "image1": "https://images.thenorthface.com/is/image/TheNorthFace/NF0A7QA7_6R4_hero?wid=1300&hei=1510&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0",
+                "image2": "https://images.thenorthface.com/is/image/TheNorthFace/NF0A7QA7_6R4_back?wid=1300&hei=1510&fmt=jpeg&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0"
+            },
+            "qty": "8",
+            "size": "XL"
+        },
+        {
+            "id": "c003",
+            "title": "Men's Graphic Shorts",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "200",
+            "image": {
+                "image1": "https://underarmour.scene7.com/is/image/Underarmour/V5-1306443-001_FC_Main?rp=standard-0pad|pdpZoomDesktop&scl=0.72&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=f0f0f0&wid=1836&hei=1950&size=1500,1500",
+                "image2": "https://underarmour.scene7.com/is/image/Underarmour/PS1306443-001_HF?rp=standard-0pad|pdpZoomDesktop&scl=0.72&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=f0f0f0&wid=1836&hei=1950&size=1500,1500"
+            },
+            "qty": "8",
+            "size": "XL"
+        },
+        {
+            "id": "c004",
+            "title": "Women's Ankle Leggings",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "550",
+            "image": {
+                "image1": "https://underarmour.scene7.com/is/image/Underarmour/V5-1377752-001_FC?rp=standard-0pad|pdpZoomDesktop&scl=0.72&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=f0f0f0&wid=1836&hei=1950&size=1500,1500",
+                "image2": "https://underarmour.scene7.com/is/image/Underarmour/V5-1377752-001_FSF?rp=standard-0pad|pdpZoomDesktop&scl=0.72&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=f0f0f0&wid=1836&hei=1950&size=1500,1500"
+            },
+            "qty": "8",
+            "size": "XL"
+        },
+        {
+            "id": "c005",
+            "title": "FELIZ LS TEE",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "799",
+            "image": {
+                "image1": "https://www.skechers.in/on/demandware.static/-/Sites-skechers_india/default/dwddad3a54/images/large/196311841392-1.jpg",
+                "image2": "https://www.skechers.in/on/demandware.static/-/Sites-skechers_india/default/dw7f10959e/images/large/196311841392-2.jpg"
+            },
+            "qty": "8",
+            "size": "XL"
+        },
+        {
+            "id": "c006",
+            "title": "PALM TREE DREAMS TEE",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "699",
+            "image": {
+                "image1": "https://www.skechers.in/on/demandware.static/-/Sites-skechers_india/default/dwc5bab401/images/large/195969824429-1.jpg",
+                "image2": "https://www.skechers.in/on/demandware.static/-/Sites-skechers_india/default/dwcf365af0/images/large/195969824429-2.jpg"
+            },
+            "qty": "8",
+            "size": "XL"
+        },
+        {
+            "id": "c007",
+            "title": "Ravini Short",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "500",
+            "image": {
+                "image1": "https://www.fila.com/dw/image/v2/AAEJ_PRD/on/demandware.static/-/Sites-FilaUSACatalogID/default/dw7944bee2/images/ProductImages/LM23B538_306_04_e.jpg?sw=1334&sh=2000&sm=fit",
+                "image2": "https://www.fila.com/dw/image/v2/AAEJ_PRD/on/demandware.static/-/Sites-FilaUSACatalogID/default/dw7944bee2/images/ProductImages/LM23B538_306_04_e.jpg?sw=1334&sh=2000&sm=fit"
+            },
+            "qty": "8",
+            "size": "XL"
+        },
+        {
+            "id": "c008",
+            "title": "Fi-Lux Open Back Tank Top",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "550",
+            "image": {
+                "image1": "https://www.fila.com/dw/image/v2/AAEJ_PRD/on/demandware.static/-/Sites-FilaUSACatalogID/default/dwdea383c2/images/ProductImages/FW11A514_940_02_e.jpg?sw=1334&sh=2000&sm=fit",
+                "image2": "https://www.fila.com/dw/image/v2/AAEJ_PRD/on/demandware.static/-/Sites-FilaUSACatalogID/default/dwbc237440/images/ProductImages/FW11A514_940_03_e.jpg?sw=1334&sh=2000&sm=fit"
+            },
+            "qty": "8",
+            "size": "XL"
+        }
+    ]
+}

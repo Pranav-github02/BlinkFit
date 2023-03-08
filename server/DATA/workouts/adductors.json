@@ -1,0 +1,50 @@
+[
+    {
+        "bodyPart": "upper legs",
+        "equipment": "assisted",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1712.gif",
+        "id": "1712",
+        "name": "assisted side lying adductor stretch",
+        "target": "adductors"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1494.gif",
+        "id": "1494",
+        "name": "butterfly yoga pose",
+        "target": "adductors"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0168.gif",
+        "id": "0168",
+        "name": "cable hip adduction",
+        "target": "adductors"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0598.gif",
+        "id": "0598",
+        "name": "lever seated hip adduction",
+        "target": "adductors"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3667.gif",
+        "id": "3667",
+        "name": "side lying hip adduction (male)",
+        "target": "adductors"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1775.gif",
+        "id": "1775",
+        "name": "side plank hip adduction",
+        "target": "adductors"
+    }
+]

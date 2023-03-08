@@ -1,0 +1,100 @@
+{
+    "footwear": [
+        {
+            "id": "f001",
+            "title": "Veterans Day Training Shoes",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "1,199",
+            "image": {
+                "image1": "https://underarmour.scene7.com/is/image/Underarmour/3025556-301_PAIR?rp=standard-30pad|pdpZoomDesktop&scl=0.50&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=f0f0f0&wid=1836&hei=1950&size=850,850",
+                "image2": "https://underarmour.scene7.com/is/image/Underarmour/3025556-301_SOLE?rp=standard-30pad|pdpZoomDesktop&scl=0.50&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=f0f0f0&wid=1836&hei=1950&size=850,850"
+            },
+            "qty": "8",
+            "size": "9"
+        },
+        {
+            "id": "f002",
+            "title": "BSR 2 Training Shoes",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "999",
+            "image": {
+                "image1": "https://underarmour.scene7.com/is/image/Underarmour/3025081-601_PAIR?rp=standard-30pad|pdpZoomDesktop&scl=0.50&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=f0f0f0&wid=1836&hei=1950&size=850,850",
+                "image2": "https://underarmour.scene7.com/is/image/Underarmour/3025081-601_SOLE?rp=standard-30pad|pdpZoomDesktop&scl=0.50&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=f0f0f0&wid=1836&hei=1950&size=850,850"
+            },
+            "qty": "8",
+            "size": "9"
+        },
+        {
+            "id": "f003",
+            "title": "GO RUN ARCH FIT",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "2,099",
+            "image": {
+                "image1": "https://www.skechers.in/on/demandware.static/-/Sites-skechers_india/default/dw03af472a/images/large/220629-1.jpg",
+                "image2": null
+            },
+            "qty": "8",
+            "size": "9"
+        },
+        {
+            "id": "f004",
+            "title": "GO RUN RIDE 9",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "1,699",
+            "image": {
+                "image1": "https://www.skechers.in/on/demandware.static/-/Sites-skechers_india/default/dw644cc426/images/large/194880881047-1.jpg",
+                "image2": "https://www.skechers.in/on/demandware.static/-/Sites-skechers_india/default/dw57e62a87/images/large/194880881047-3.jpg"
+            },
+            "qty": "8",
+            "size": "9"
+        },
+        {
+            "id": "f005",
+            "title": "Men's Ray Tracer Evo 2",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "3,099",
+            "image": {
+                "image1": "https://www.fila.com/dw/image/v2/AAEJ_PRD/on/demandware.static/-/Sites-FilaUSACatalogID/default/dwf7cb71e2/images/ProductImages/1RM01978_041_04_e.jpg?sw=1334&sh=2000&sm=fit",
+                "image2": "https://www.fila.com/dw/image/v2/AAEJ_PRD/on/demandware.static/-/Sites-FilaUSACatalogID/default/dw5d3af9d1/images/ProductImages/1RM01978_041_03_e.jpg?sw=523&sh=785&sm=fit"
+            },
+            "qty": "8",
+            "size": "10"
+        },
+        {
+            "id": "f006",
+            "title": "Women's Disruptor 2 EXP",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "2,499",
+            "image": {
+                "image1": "https://www.fila.com/dw/image/v2/AAEJ_PRD/on/demandware.static/-/Sites-FilaUSACatalogID/default/dw150280b8/images/ProductImages/5XM01544_003_04_e.jpg?sw=523&sh=785&sm=fit",
+                "image2": "https://www.fila.com/dw/image/v2/AAEJ_PRD/on/demandware.static/-/Sites-FilaUSACatalogID/default/dw1b7ca815/images/ProductImages/5XM01544_003_03_e.jpg?sw=523&sh=785&sm=fit"
+            },
+            "qty": "8",
+            "size": "9"
+        },
+        {
+            "id": "f007",
+            "title": "Men's Oakmont Tr",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "3,799",
+            "image": {
+                "image1": "https://www.fila.com/dw/image/v2/AAEJ_PRD/on/demandware.static/-/Sites-FilaUSACatalogID/default/dwf3d52fcd/images/ProductImages/1JM01745_035_04_e.jpg?sw=1334&sh=2000&sm=fit",
+                "image2": "https://www.fila.com/dw/image/v2/AAEJ_PRD/on/demandware.static/-/Sites-FilaUSACatalogID/default/dw11d970ab/images/ProductImages/1JM01745_035_03_e.jpg?sw=1334&sh=2000&sm=fit"
+            },
+            "qty": "8",
+            "size": "9"
+        },
+        {
+            "id": "f008",
+            "title": "Renno",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "price": "4,099",
+            "image": {
+                "image1": "https://www.fila.com/dw/image/v2/AAEJ_PRD/on/demandware.static/-/Sites-FilaUSACatalogID/default/dwf2a6cdb5/images/ProductImages/1RM01972_051_04_e.jpg?sw=1334&sh=2000&sm=fit",
+                "image2": "https://www.fila.com/dw/image/v2/AAEJ_PRD/on/demandware.static/-/Sites-FilaUSACatalogID/default/dwc7414873/images/ProductImages/1RM01972_051_03_e.jpg?sw=523&sh=785&sm=fit"
+            },
+            "qty": "8",
+            "size": "9"
+        }
+    ]
+}

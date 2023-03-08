@@ -1,0 +1,70 @@
+{
+    "equipment": [
+        {
+            "id": "e001",
+            "title": "T-90 Endurance Treadmill",
+            "desc": "Suitable for intensive & professional use with 44 training programs, bluetooth support, fitted with powerful, silent and maintenance free motor.",
+            "price": "59,999",
+            "image": {
+                "image1": "https://www.vivafitness.net/wp-content/uploads/T90-PICTURE-5.jpg",
+                "image2": "https://www.vivafitness.net/wp-content/uploads/T90-PICTURE-2.jpg"
+            },
+            "quantity": "8"
+        },
+        {
+            "id": "e002",
+            "title": "KH-325 Deluxe Home Gym",
+            "desc": "High end home gym with adjustments in most of the seats and handles and durable power coated finish. Product has to be assembled using an installation manual provided in the package. We do not provide onsite installation services.",
+            "price": "47,999",
+            "image": {
+                "image1": "https://www.vivafitness.net/wp-content/uploads/KH-325-Deluxe-Home-Gym.jpg",
+                "image2": "https://www.vivafitness.net/wp-content/uploads/KH325_1.jpg"
+            },
+            "quantity": "8"
+        },
+        {
+            "id": "e003",
+            "title": "E600 Elliptical Trainer",
+            "desc": "LED dot matrix console readouts: incline, time, distance, calories, pulse, speed / rpm, level, watt, fan etc. Both forward & reverse motions offer various workout options. With 15 level power incline.",
+            "price": "60,999",
+            "image": {
+                "image1": "https://www.vivafitness.net/wp-content/uploads/E600.jpg",
+                "image2": null
+            },
+            "quantity": "8"
+        },
+        {
+            "id": "e004",
+            "title": "KH-812 Programable Magnetic Recumbent Bike",
+            "desc": "Ergometer Magnetic Recumbent Bike. Digital coloured screen showing time, rpm, speed, distance, calories, pulse, recovery, body fat. Reclinable back seat for more comfort.",
+            "price": "70,999",
+            "image": {
+                "image1": "https://www.vivafitness.net/wp-content/uploads/KH-812.jpg",
+                "image2": null
+            },
+            "quantity": "8"
+        },
+        {
+            "id": "e005",
+            "title": "Diamond Cut Dumbbells",
+            "desc": "Diamond Cut Dumbbells 10 KGS. 1 PAIR",
+            "price": "4,690",
+            "image": {
+                "image1": "https://ecomapi.beingstrong.in/Content/600X600/hr-diamond-cut-dumbbells.jpg",
+                "image2": null
+            },
+            "quantity": "8"
+        },
+        {
+            "id": "e006",
+            "title": "Dumbbells and Bars Kit",
+            "desc": "Weight Training Dumbbells and Bars Kit 50 kg Black. The 50 kg kit is developed by our weight training coaches and design team for weight training at home.",
+            "price": "12,999",
+            "image": {
+                "image1": "https://contents.mediadecathlon.com/p1562280/4557cf0246a14e117e8b1c6886062fa3/p1562280.jpg",
+                "image2": "https://contents.mediadecathlon.com/p1562273/c0877a00a0b72ac588a79b679a1b812a/p1562273.jpg"
+            },
+            "quantity": "8"
+        }
+    ]
+}
