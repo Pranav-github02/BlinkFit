@@ -10,10 +10,11 @@ class BestSelling extends PureComponent {
         }
     }
     componentDidMount() {
-        let url = `https://pranav-github02.github.io/blinkfit-api/shop/clothing.json`
+        let url = `http://localhost:5000/shop/clothing`
         axios.get(url)
             .then(response => {
-                this.setState({ bestSelling: response.data.clothing })
+                console.log(response);
+                this.setState({ bestSelling: response.data.clothing.clothing })
             })
             .catch(error => console.error(error))
     }
