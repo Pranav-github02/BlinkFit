@@ -1,0 +1,74 @@
+.shop {
+    background: transparent;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.shop .banner {
+    background-image: url(./media/bg.jpg);
+}
+
+.shop .page-title {
+    margin: 0 0 60px;
+    font-size: 20px;
+    padding-top: 85px;
+    padding-bottom: 90px;
+    background-position: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.shop .title-heading {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+}
+
+.shop .title-heading h1 {
+    margin-top: 0;
+    font-size: 55px;
+    color: #fff;
+    text-align: center;
+}
+
+.shop .banner .sub-catg {
+    display: block;
+}
+
+.shop .banner .sub-catg .content {
+    position: relative;
+    max-width: 750px;
+    margin: 10px auto 0;
+}
+
+.shop .banner .sub-catg .content ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    position: relative;
+}
+
+.shop .banner .sub-catg .content li {
+    float: left;
+}
+
+.shop .banner .sub-catg .content ul a {
+    font-size: 50px;
+    width: auto;
+    height: auto;
+    color: #fff;
+    overflow: unset;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.shop .banner .sub-catg .content ul h2 {
+    font-size: 14px;
+    color: #fff;
+    margin: 7px 0 6px;
+    text-transform: uppercase;
+}
+
