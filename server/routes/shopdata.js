@@ -44,7 +44,7 @@ router.get("/:item", async (req, res) => {
     } catch (error) {
       return res.status(500).json({ message: error.message });
     }
-  } else {
+  } else if (item === "footwear") {
     try {
       const data = await Footwear.find();
       if (data) {
@@ -55,6 +55,63 @@ router.get("/:item", async (req, res) => {
     } catch (error) {
       return res.status(500).json({ message: error.message });
     }
+  } else {
+    return res.status(404).json({ message: "Entry not found" });
+  }
+});
+
+router.get("/getcount/:item", async (req, res) => {
+  const item = req.params.item;
+  if (item === "accessories") {
+    try {
+      const data = await Accessorie.find();
+      const amount = data.length;
+      if (data) {
+        return res.status(200).json({ amount });
+      } else {
+        return res.status(500).json({ message: "Server error" });
+      }
+    } catch (error) {
+      return res.status(500).json({ message: error.message });
+    }
+  } else if (item === "clothing") {
+    try {
+      const data = await Clothing.find();
+      const amount = data.length;
+      if (data) {
+        return res.status(200).json({ amount });
+      } else {
+        return res.status(500).json({ message: "Server error" });
+      }
+    } catch (error) {
+      return res.status(500).json({ message: error.message });
+    }
+  } else if (item === "equipment") {
+    try {
+      const data = await Equipment.find();
+      const amount = data.length;
+      if (data) {
+        return res.status(200).json({ amount });
+      } else {
+        return res.status(500).json({ message: "Server error" });
+      }
+    } catch (error) {
+      return res.status(500).json({ message: error.message });
+    }
+  } else if (item === "footwear") {
+    try {
+      const data = await Footwear.find();
+      const amount = data.length;
+      if (data) {
+        return res.status(200).json({ amount });
+      } else {
+        return res.status(500).json({ message: "Server error" });
+      }
+    } catch (error) {
+      return res.status(500).json({ message: error.message });
+    }
+  } else {
+    return res.status(404).json({ message: "Entry not found" });
   }
 });
 
