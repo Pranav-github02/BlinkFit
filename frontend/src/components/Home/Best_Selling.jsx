@@ -14,7 +14,7 @@ class BestSelling extends PureComponent {
         axios.get(url)
             .then(response => {
                 console.log(response);
-                this.setState({ bestSelling: response.data.clothing.clothing })
+                this.setState({ bestSelling: response.data.data })
             })
             .catch(error => console.error(error))
     }
