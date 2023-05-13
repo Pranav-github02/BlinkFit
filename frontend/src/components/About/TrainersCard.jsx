@@ -20,7 +20,7 @@ const TrainersCard = ({
       >
         <div>
           <img
-            src={image}
+            src="https://drive.google.com/file/d/1SFnP_hnXCCDPR1ruFfnnXZkv_DaJAgxJ/view?usp=share_link"
             style={{ width: "300px", height: "100%" }}
             alt="trainer profile img"
           />
