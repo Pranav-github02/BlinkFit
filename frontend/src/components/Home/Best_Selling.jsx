@@ -13,7 +13,6 @@ class BestSelling extends PureComponent {
         let url = `http://localhost:5000/shop/clothing`
         axios.get(url)
             .then(response => {
-                console.log(response);
                 this.setState({ bestSelling: response.data.data })
             })
             .catch(error => console.error(error))
@@ -52,21 +51,7 @@ class BestSelling extends PureComponent {
 
         )
     }
-    return (
-      <div className="best_selling">
-        <h2 className="title">BESTSELLER</h2>
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-around",
-          }}
-        >
-          {bestseller}
-        </div>
-      </div>
-    );
   }
-}
+
 
 export default BestSelling;
