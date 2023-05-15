@@ -1,5 +1,6 @@
 import React from "react";
 import './shop.css'
+import Content from "./Content";
 
 const Shop = () => {
   return (
@@ -13,19 +14,19 @@ const Shop = () => {
             <div className="content">
               <ul>
                 <li>
-                  <a href=""><i class="fa-thin fa-shirt"></i></a>
+                  <a href=""><i className="fa-thin fa-shirt"></i></a>
                   <h2>clothing</h2>
                 </li>
                 <li>
-                  <a href=""><i class="fa-thin fa-boxing-glove"></i></a>
+                  <a href=""><i className="fa-thin fa-boxing-glove"></i></a>
                   <h2>accessories</h2>
                 </li>
                 <li>
-                  <a href=""><i class="fa-thin fa-boot"></i></a>
+                  <a href=""><i className="fa-thin fa-boot"></i></a>
                   <h2>footwear</h2>
                 </li>
                 <li>
-                  <a href=""><i class="fa-thin fa-dumbbell"></i></a>
+                  <a href=""><i className="fa-thin fa-dumbbell"></i></a>
                   <h2>equipment</h2>
                 </li>
               </ul>
@@ -33,6 +34,7 @@ const Shop = () => {
           </div>
         </div>
       </div>
+      <Content />
     </div>
   );
 };
