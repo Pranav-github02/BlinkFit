@@ -147,14 +147,14 @@ router.get("/:item", async (req, res) => {
       const [accessorieData, clothingData, footwearData, equipmentData] =
         result;
 
-      const mergedData = [
+      const data = [
         ...accessorieData,
         ...clothingData,
         ...footwearData,
         ...equipmentData,
       ];
 
-      res.status(200).json(mergedData);
+      res.status(200).json({data});
     } catch (error) {
       console.error("Error fetching data:", error);
       res.status(500).json({ error: "Internal Server Error" });
