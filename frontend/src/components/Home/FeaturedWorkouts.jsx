@@ -10,16 +10,18 @@ class FeaturedWorkouts extends PureComponent {
       featuredWorkouts: null,
     };
   }
+
   componentDidMount() {
     let url = `http://localhost:5000/workouts/abs`;
     axios
       .get(url)
       .then((response) => {
         console.log(response);
-        this.setState({ featuredWorkouts: response.data.abs });
+        this.setState({ featuredWorkouts: response.data.abs.slice(0, 9) });
       })
       .catch((error) => console.error(error));
   }
+
   render() {
     let featuredWorkout = <p>Loading.....</p>;
     if (this.state.featuredWorkouts != null) {
@@ -29,17 +31,16 @@ class FeaturedWorkouts extends PureComponent {
             <FeaturedWorkoutCard
               key={obj.id}
               id={obj.id}
-              title={obj.title}
-              image={obj.image}
-              desc={obj.desc}
-              price={obj.price}
+              name={obj.name}
+              equipment={obj.equipment}
+              gifUrl={obj.gifUrl}
             />
           ))}
         </>
       );
     }
     return (
-      <div className="best_selling">
+      <div className="featured_workout">
         <h2 className="title">FEATURED WORKOUTS</h2>
         <div
           style={{

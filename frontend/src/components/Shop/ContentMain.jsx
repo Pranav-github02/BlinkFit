@@ -7,12 +7,9 @@ const ContentMain = ({ category }) => {
 
   useEffect(() => {
     let url = `http://localhost:5000/shop/${category}`;
-    console.log(category);
-    console.log(url);
     axios
       .get(url)
       .then((res) => {
-        console.log(res);
         const shuffledItems = res.data.data.sort(() => Math.random() - 0.5);
         setItems(shuffledItems);
       })

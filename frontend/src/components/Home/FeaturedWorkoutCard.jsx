@@ -1,8 +1,7 @@
 import React from "react";
-// import { useState } from "react";
 import "./FeaturedWorkouts.css";
 
-const FeaturedWorkoutCard = ({ gifUrl, id, name, target }) => {
+const FeaturedWorkoutCard = ({ name, equipment, gifUrl }) => {
   return (
     <>
       <div className="featuredworkout">
@@ -19,26 +18,16 @@ const FeaturedWorkoutCard = ({ gifUrl, id, name, target }) => {
                 <i className="fa-solid fa-heart"></i>
               </button>
             </div>
-            <div className="product-button">
+            <div className="workout-button">
               <div className="add_cart"></div>
-              <div className="quick-view">
-                <a
-                  type="button"
-                  href="#Modal"
-                  data-bs-toggle="modal"
-                  data-bs-target="#Modal"
-                >
-                  <i className="fa-solid fa-magnifying-glass"></i>
-                </a>
-              </div>
             </div>
           </div>
-          <div className="product-content">
+          <div className="workout-content">
             <div className="rating">
               <span className="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
               <span className="count">(1 review)</span>
             </div>
-            <p className="title">{target}</p>
+            <p className="title">{name}</p>
           </div>
         </div>
       </div>

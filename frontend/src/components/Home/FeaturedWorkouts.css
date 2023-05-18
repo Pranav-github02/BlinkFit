@@ -1,0 +1,55 @@
+.featured_workout {
+    margin: 10px;
+}
+
+.featured_workout .title {
+    text-align: left;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 35px;
+}
+
+
+
+
+.featured_workout .workout {
+    position: relative;
+    padding: 0;
+    margin: 0 0 30px;
+    text-align: center;
+}
+
+.featured_workout .workout .wishlist {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.featured_workout .workout .wishlist button {
+    /* font-size: 0; */
+    background: #fff;
+    text-align: center;
+    position: relative;
+    white-space: nowrap;
+    margin-top: 0;
+    color: lightgray;
+    width: 39px;
+    height: 39px;
+    line-height: 39px;
+    display: inline-block;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    top: 0;
+    right: 0;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.featured_workout .workout .wishlist button:focus,
+.featured_workout .workout .wishlist button:active {
+    color: red;
+}
