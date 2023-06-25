@@ -162,8 +162,12 @@
 }
 
 .shop .content-main .filter_sidebar .main .filter-product .filter-price {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     float: unset;
+}
+
+.shop .content-main .filter_sidebar .main .filter-product .filter-price .filter-price-content {
+    margin-bottom: 80px;
 }
 
 .shop .content-main .filter_sidebar .main .filter-product .filter-size {
@@ -371,4 +375,41 @@
     color: #a0a0a0;
     font-weight: 400;
     font-family: Arquitecta;
+}
+
+
+.slider-track {
+    background-color: #ddd;
+    height: 4px;
+}
+
+.slider-track.active {
+    background-color: var(--bs-link-color);
+}
+
+.slider-thumb {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    height: 20px;
+    width: 20px;
+    cursor: ew-resize;
+    outline: none;
+}
+
+.slider-thumb.active {
+    border-color: var(--bs-link-color);
+}
+
+.price-range {
+    position: relative;
+    top: 30px;
+    left: -90px;
+    color: #000;
+    font-weight: 500;
+
+}
+
+.price-range span {
+    color: #868686;
+    font-weight: 400;
 }

@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import ContentMain from "./ContentMain";
 import axios from "axios";
+import ReactSlider from "react-slider";
+
 
 const Content = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,12 +24,14 @@ const Content = () => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-  // console.log(categoryCount[0]);
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setIsOpen(false);
     }
   };
+
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(5000);
 
   useEffect(() => {
     const fetchCategoryCounts = async () => {
@@ -93,7 +97,7 @@ const Content = () => {
     <div className="dropdown-content">{renderOptions}</div>
   );
 
-  const contentMain = <ContentMain category={selectedCategory} />;
+  const contentMain = <ContentMain category={selectedCategory} minPrice={minPrice} maxPrice={maxPrice} />;
   return (
     <div>
       <main>
@@ -120,7 +124,33 @@ const Content = () => {
                   </div>
                   <div className="filter-price">
                     <h3>Price</h3>
-                    <div className="filter-price-content"></div>
+                    <div className="filter-price-content">
+                      <ReactSlider
+                        min={0}
+                        max={5000}
+                        value={[minPrice, maxPrice]}
+                        onChange={(value) => {
+                          setMinPrice(value[0]);
+                          setMaxPrice(value[1]);
+                        }}
+                        renderTrack={(props, state) => (
+                          <div
+                            {...props}
+                            className={`slider-track ${state.index === 2 ? "active" : ""}`}
+                          />
+                        )}
+                        renderThumb={(props, state) => (
+                          <div
+                            {...props}
+                            className={`slider-thumb ${state.index === 2 ? "active" : ""}`}
+                          />
+                        )}
+                      />
+                      <div className="price-range">
+                        <span>Range : </span>
+                        ₹{minPrice} - ₹{maxPrice}
+                      </div>
+                    </div>
                   </div>
                   <div className="filter-size">
                     <h3>Size</h3>
@@ -155,9 +185,6 @@ const Content = () => {
                     {dropdownContent}
                   </div>
                 </div>
-                {/* <ul className='display-type'>
-                                    <li></li>
-                                </ul> */}
               </div>
               {contentMain}
             </div>
