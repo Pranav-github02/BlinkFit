@@ -255,9 +255,10 @@
 }
 
 .dropdown-content {
-    position: absolute;
+    position: relative;
+    z-index: 9999;
     top: 100%;
-    left: 0;
+    left: -20px;
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 4px;
