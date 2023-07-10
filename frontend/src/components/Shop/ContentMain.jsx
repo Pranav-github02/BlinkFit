@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ContentMainCard from "./ContentMainCard";
 
-const ContentMain = ({ category, minPrice, maxPrice }) => {
+const ContentMain = ({ category, minPrice, maxPrice, sortOrder, size }) => {
   const [items, setItems] = useState(null);
 
   useEffect(() => {
@@ -10,16 +10,33 @@ const ContentMain = ({ category, minPrice, maxPrice }) => {
     axios
       .get(url)
       .then((res) => {
-        const shuffledItems = res.data.data.sort(() => Math.random() - 0.5);
+        let shuffledItems;
+        switch (sortOrder) {
+          case "Sort By Price: Low To High":
+            // Sort items by price in ascending order
+            shuffledItems = res.data.data.sort((a, b) => a.price - b.price);
+            break;
+          case "Sort By Price: High To Low":
+            // Sort items by price in descending order
+            shuffledItems = res.data.data.sort((a, b) => b.price - a.price);
+            break;
+          default:
+            // No sorting required
+            shuffledItems = res.data.data.sort(() => Math.random() - 0.5);
+            break;
+        }
+        // const shuffledItems = res.data.data.sort(() => Math.random() - 0.5);
         const filtered = shuffledItems.filter(
           (item) => item.price >= minPrice && item.price <= maxPrice
         );
-        setItems(filtered);
+        let sizeFilter;
+        if (size) {
+          sizeFilter = filtered.filter(item => item.size === size);
+        }
+        size ? setItems(sizeFilter) : setItems(filtered)
       })
       .catch((err) => console.error(err));
-  }, [category, minPrice, maxPrice]);
-
-  console.log(minPrice, maxPrice);
+  }, [category, minPrice, maxPrice, sortOrder, size]);
 
   let products = <p>Loading.....</p>;
   if (items != null) {

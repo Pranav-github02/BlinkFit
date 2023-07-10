@@ -7,12 +7,13 @@ import ReactSlider from "react-slider";
 const Content = () => {
   const [isOpen, setIsOpen] = useState(false);
   const options = [
+    "Sort By Relevance",
     "Sort By Popularity",
     "Sort By Price: Low To High",
     "Sort By Price: High To Low",
   ];
   const dropdownRef = useRef(null);
-  const [selectedOption, setSelectedOption] = useState("");
+  const [selectedOption, setSelectedOption] = useState("Sort By Relevance");
   const [categoryCount, setCategoryCount] = useState([
     { name: "allItems", count: 0 },
     { name: "clothing", count: 0 },
@@ -30,8 +31,17 @@ const Content = () => {
     }
   };
 
+  const resetFilters = () => {
+    setSelectedCategory("allItems");
+    setMinPrice(0);
+    setMaxPrice(5000);
+    setSelectedSize("");
+  }
+
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(5000);
+
+  const [selectedSize, setSelectedSize] = useState("");
 
   useEffect(() => {
     const fetchCategoryCounts = async () => {
@@ -91,13 +101,13 @@ const Content = () => {
     </div>
   ));
 
-  const dropdownHeader = selectedOption ? selectedOption : "Sort By Relevance";
+  const dropdownHeader = selectedOption;
 
   const dropdownContent = isOpen && (
     <div className="dropdown-content">{renderOptions}</div>
   );
 
-  const contentMain = <ContentMain category={selectedCategory} minPrice={minPrice} maxPrice={maxPrice} />;
+  const contentMain = <ContentMain category={selectedCategory} minPrice={minPrice} maxPrice={maxPrice} sortOrder={selectedOption} size={selectedSize} />;
   return (
     <div>
       <main>
@@ -156,20 +166,44 @@ const Content = () => {
                     <h3>Size</h3>
                     <div className="size-filter">
                       <ul className="sizes">
-                        <li>
+                        <li onClick={() => setSelectedSize("")}>
+                          <span>None</span>
+                        </li>
+                        <li onClick={() => setSelectedSize("XL")}>
                           <span>XL</span>
                         </li>
-                        <li>
+                        <li onClick={() => setSelectedSize("L")}>
                           <span>L</span>
                         </li>
-                        <li>
+                        <li onClick={() => setSelectedSize("M")}>
                           <span>M</span>
                         </li>
-                        <li>
+                        <li onClick={() => setSelectedSize("S")}>
                           <span>S</span>
+                        </li>
+                        <li onClick={() => setSelectedSize("UK6")}>
+                          <span>UK6</span>
+                        </li>
+                        <li onClick={() => setSelectedSize("UK7")}>
+                          <span>UK7</span>
+                        </li>
+                        <li onClick={() => setSelectedSize("UK8")}>
+                          <span>UK8</span>
+                        </li>
+                        <li onClick={() => setSelectedSize("UK9")}>
+                          <span>UK9</span>
+                        </li>
+                        <li onClick={() => setSelectedSize("UK10")}>
+                          <span>UK10</span>
+                        </li>
+                        <li onClick={() => setSelectedSize("UK11")}>
+                          <span>UK11</span>
                         </li>
                       </ul>
                     </div>
+                  </div>
+                  <div className="resetButton">
+                    <button type="reset" onClick={() => resetFilters()}>Reset</button>
                   </div>
                 </form>
               </div>
