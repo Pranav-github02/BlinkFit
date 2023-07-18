@@ -11,15 +11,23 @@ class FeaturedWorkouts extends PureComponent {
     };
   }
 
-  componentDidMount() {
-    let url = `http://localhost:5000/workouts/abs`;
-    axios
-      .get(url)
-      .then((response) => {
-        console.log(response);
-        this.setState({ featuredWorkouts: response.data.abs.slice(0, 9) });
-      })
-      .catch((error) => console.error(error));
+  async componentDidMount() {
+    const options = {
+      method: "GET",
+      url: "https://exercisedb.p.rapidapi.com/exercises/bodyPart/chest",
+      headers: {
+        "X-RapidAPI-Key": "698e3c62abmshf3cd4f832f5e9ecp19d546jsna529f23ed0a9",
+        "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
+      },
+    };
+
+    try {
+      const response = await axios.request(options);
+      console.log(response.data);
+      this.setState({ featuredWorkouts: response.data.slice(0, 9) });
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   render() {
