@@ -14,11 +14,11 @@ const ContentMain = ({ category, minPrice, maxPrice, sortOrder, size }) => {
         switch (sortOrder) {
           case "Sort By Price: Low To High":
             // Sort items by price in ascending order
-            shuffledItems = res.data.data.sort((a, b) => a.price - b.price);
+            shuffledItems = res.data.data.sort((a, b) => Number(a.price.replace(/,/g, "")) - Number(b.price.replace(/,/g, "")));
             break;
           case "Sort By Price: High To Low":
             // Sort items by price in descending order
-            shuffledItems = res.data.data.sort((a, b) => b.price - a.price);
+            shuffledItems = res.data.data.sort((a, b) => Number(b.price.replace(/,/g, "")) - Number(a.price.replace(/,/g, "")));
             break;
           default:
             // No sorting required
