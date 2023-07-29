@@ -25,9 +25,9 @@ const ContentMain = ({ category, minPrice, maxPrice, sortOrder, size }) => {
             shuffledItems = res.data.data.sort(() => Math.random() - 0.5);
             break;
         }
-        // const shuffledItems = res.data.data.sort(() => Math.random() - 0.5);
+
         const filtered = shuffledItems.filter(
-          (item) => item.price >= minPrice && item.price <= maxPrice
+          (item) => Number(item.price.replace(/,/g, "")) >= minPrice && Number(item.price.replace(/,/g, "")) <= maxPrice
         );
         let sizeFilter;
         if (size) {

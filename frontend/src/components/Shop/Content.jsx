@@ -34,12 +34,12 @@ const Content = () => {
   const resetFilters = () => {
     setSelectedCategory("allItems");
     setMinPrice(0);
-    setMaxPrice(5000);
+    setMaxPrice(90000);
     setSelectedSize("");
   }
 
   const [minPrice, setMinPrice] = useState(0);
-  const [maxPrice, setMaxPrice] = useState(5000);
+  const [maxPrice, setMaxPrice] = useState(90000);
 
   const [selectedSize, setSelectedSize] = useState("");
 
@@ -137,7 +137,7 @@ const Content = () => {
                     <div className="filter-price-content">
                       <ReactSlider
                         min={0}
-                        max={5000}
+                        max={90000}
                         value={[minPrice, maxPrice]}
                         onChange={(value) => {
                           setMinPrice(value[0]);
